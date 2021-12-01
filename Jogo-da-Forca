@@ -1,0 +1,151 @@
+import random
+from graphics import *
+
+def redo_operador(lista):
+    # Funciona que resorteia um operator
+    return random.choice(lista)
+
+def main():
+    win = GraphWin("Jogo da Forca", 600, 400)
+    
+    # tamanho da janela
+    largura, altura = win.getWidth(), win.getHeight() 
+    
+    # cor de fundo
+    tela = Rectangle(Point(10,10),Point(590,390))
+    tela.setFill(color_rgb(0,100,200))
+    tela.draw(win)
+    
+    # definir texto no meio da tela, ligeiramente para cima
+    ponto = Point(largura/2,altura/2 - 100)
+    texto=Text(ponto,"Complete a equação com os simbolos:")
+    texto.draw(win)
+   
+    # definir texto no meio da tela, logo abaixo ao de cima
+    ponto2 = Point(largura/2,altura/2 - 50)
+    texto2 = Text(ponto2,"(+, -, * , /)")
+    texto2.draw(win)
+    
+    # valores aleatorios entre 0 - 10
+    valor1 = int(random.randrange(0, 10))
+    valor2 = int(random.randrange(0, 10))
+    valor3 = int(random.randrange(0, 10))
+    
+    # lista de operadores
+    lista = ['-', '+', '*', '/']
+    
+    # para evitar divisoes por zero, excluimos o operador
+    # antes do valor zero
+    if valor2 == 0:
+        # nao pode sair divisao
+        op1 = random.choice([i for i in lista if i != '/'])
+        op2 = random.choice(lista)
+    elif valor3 == 0:
+        op1 = random.choice(lista)
+        # nao pode sair divisao
+        op2 = random.choice([i for i in lista if i != '/'])
+    else:
+        op1 = random.choice(lista)
+        op2 = random.choice(lista)
+
+    # criar equacao
+    resposta = eval(str(valor1) + op1 + str(valor2) + op2 + str(valor3))
+    
+    # equacao no meio da tela
+    ponto4 = Point(largura/2,altura/2)
+    texto3 = Text(ponto4, '{} _ {} _ {} = {}' .format(valor1, valor2, valor3, resposta))
+    texto3.draw(win)
+    
+    # erros
+    cont = 6
+    ganhou = False
+    for i in range(cont):
+
+        # caixa de texto para o primeiro operador
+        caixa_operacao1 = Point(largura/2 - 100,altura - 120)
+        operacao1 = Entry(caixa_operacao1, 1)
+        operacao1.setText('')
+        operacao1.draw(win)
+
+        # texto a indiciar caixa
+        texto_op1 = Text(Point(largura/2 - 155, altura - 120), "Operador 1:")
+        texto_op1.draw(win)
+    
+        # indica que o usuario terminou de digitar o input
+        win.getMouse()
+    
+        # primeiro operador do tipo string
+        a = operacao1.getText()
+    
+        # caixa de texto para o segundo operador
+        caixa_operacao2 = Point(largura/2, altura - 120)
+        operacao2 = Entry(caixa_operacao2, 1)
+        operacao2.setText('')
+        operacao2.draw(win)
+        
+        # texto a indicar a caixa
+        texto_op2 = Text(Point(largura/2 + 155, altura - 120), "Operador 2:")
+        texto_op2.draw(win)
+    
+        # indica que o usuario terminou de digitar o input
+        win.getMouse()
+
+        b = operacao2.getText()
+    
+        ponto5 = Point(largura/2,20)
+        texto5 = Text(ponto5, 'resposta correta')
+        texto6 = Text(ponto5, 'resposta errada')
+    
+        ponto6 = Point(largura/2, 40)
+        texto7= Text(ponto6, 'FIM DE JOGO')
+    
+        # Logica do jogo
+          
+        if a == op1 and b == op2:
+            ganhou = True
+            # quebra o loop
+            break
+
+        else:
+            texto6.draw(win)  
+            if i == 0:
+                l1=Line(Point(380,260),Point(330,310))
+                l1.draw(win)
+            elif i == 1:
+                l2=Line(Point(330,310),Point(380,360))
+                l2.draw(win)
+            elif i == 2:
+                l3=Line(Point(380,360),Point(470,360))
+                l3.draw(win)
+            elif i == 3:
+                l4=Line(Point(470,360),Point(530,310))
+                l4.draw(win)
+            elif i == 4:
+                l5=Line(Point(530,310),Point(470,260))
+                l5.draw(win)                    
+            elif i == 5:
+               l6 =Line(Point(470,260), Point(380,260))
+               l6.draw(win)
+            if i > 0:
+                # resetar textos
+                texto6.undraw()
+
+        # resetar valores nas caixas
+        operacao1.setText(' ')
+        operacao2.setText(' ')
+
+        # resetar textos
+        texto_op1.undraw()
+        texto_op2.undraw()
+
+    # verificar o que mostrar
+    if ganhou:
+        texto5.draw(win)
+    else:
+        texto6.draw(win)
+    
+    # saiu do loop terminou o jogo
+    texto7.draw(win)
+    win.getMouse()
+    win.close() 
+main()
