@@ -1,0 +1,799 @@
+def base_de_dados():
+#Dados retirados das bibliografias de cada matéria disponibilizadas no site da FURG
+    #lista dos livros separada por matérias
+    matérias = list()
+    matérias += 'Algoritmos e Estrutura de Dados'
+    matérias += 'Cálculo 1'
+    matérias += 'Desenho Técnico'
+    matérias += 'Geometria Analítica e Álgebra Linear'
+    matérias += 'Física Geral 1'
+    matérias += 'Fundamentos de Química'
+    matérias += 'Matemática Discreta'
+    matérias += 'Introdução à Engenharia de Computação'
+    #Dados que serão inseridos
+    nome = str()
+    autor = str()
+    matéria = str()
+    ano = str()
+    disponibilidade = int()  
+    #livros Algoritmos
+    LivrosAED = list()
+    LivrosAED += 'Fundamentos da programação de computadores: algoritmos, pascal, C/C++ (Padrão ANSI) e java 2a Edição \n'
+    livro1 = {
+        nome: 'Fundamentos da programação de computadores: algoritmos, pascal, C/C++ (Padrão ANSI) e java 2a Edição',
+        autor: 'Ana Fernanda Gomes Ascencio',
+        matéria: 'Algoritmos e Estrutura de Dados',
+        ano: '2007',
+        disponibilidade: 3
+        }
+    LivrosAED += 'Introdução a programação : 500 algoritmos resolvidos \n'
+    livro2 = {
+        nome: 'Introdução a Programação: 500 Algoritmos Resolvidos',
+        autor: 'Anita Lopes',
+        matéria: 'Algoritmos e Estrutura de Dados',
+        ano: '2002',
+        disponibilidade: 0
+        }
+    LivrosAED += 'Introdução a Algoritmos \n'
+    livro3 = {
+        nome: 'Introdução a Algoritmos',
+        autor: 'Raoni Teixeira',
+        matéria: 'Algoritmos e Estrutura de Dados',
+        ano: '2019',
+        disponibilidade: 2 
+        }
+    LivrosAED += 'Algoritmos e Programação \n'
+    livro4 = {
+        nome: 'Algoritmos e Programação',
+        autor: 'Ricardo Reis Pereira',
+        matéria: 'Algoritmos e Estrutura de Dados',
+        ano: '2019',
+        disponibilidade: 1 
+        }
+    LivrosAED += 'Como Pensar Como um Cientista da Computação \n'
+    livro5 = {
+        nome: 'Como Pensar Como um Cientista da Computação',
+        autor: 'Brad Miller',
+        matéria: 'Algoritmos e Estrutura de Dados',
+        ano: '2012',
+        disponibilidade: 0 
+        }
+    LivrosAED += 'Pense Python 2a Edição \n'
+    livro6 = {
+        nome: 'Pense em Python 2a Edição',
+        autor: 'Allen B. Downey',
+        matéria: 'Algoritmos e Estrutura de Dados',
+        ano: '2016',
+        disponibilidade: 4 
+        }
+    LivrosAED += 'Python para Todos \n'
+    livro7 = {
+        nome: 'Python Para Todos',
+        autor: 'Charles R. Severance',
+        matéria: 'Algoritmos e Estrutura de Dados',
+        ano: '2020',
+        disponibilidade: 1
+        }
+    LivrosAED += 'C Completo e Total \n'
+    livro8 = {
+        nome: 'C Completo e Total',
+        autor: 'Herbert Schildt',
+        matéria: 'Algoritmos e Estrutura de Dados',
+        ano: '1997',
+        disponibilidade: 3
+        }
+    LivrosAED += 'Treinamento em linguagem C \n'
+    livro9 = {
+        nome: 'Treinamento em Linguagem C',
+        autor: 'Victorine Viviane Mizrachi',
+        matéria: 'Algoritmos e Estrutura de Dados',
+        ano: '2005',
+        disponibilidade: 0 
+        }
+    LivrosAED += 'Curso de Programação em C \n'
+    livro10 = {
+        nome: 'Curso de Programação em C',
+        autor: 'Renato Mesquita',
+        matéria: 'Algoritmos e Estrutura de Dados',
+        ano: '1998',
+        disponibilidade: 0
+        }
+    LivrosAED += 'O Fantástico Mundo da Linguagem C \n'
+    livro11 = {
+        nome: 'O Fantástico Mundo da Linguagem C',
+        autor: 'Alexandre Fiori',
+        matéria: 'Algoritmos e Estrutura de Dados',
+        ano: '2014',
+        disponibilidade: 2
+        }
+    #livros cálculo
+    Livros_calculo = list()
+    Livros_calculo += 'Cálculo: Um Curso Moderno e suas Aplicações \n'
+    livro12 = {
+        nome: 'Cálculo: Um Curso Moderno e Suas Aplicações',
+        autor: 'Laurence D. Hoffman',
+        matéria: 'Cálculo',
+        ano: '2011',
+        disponibilidade: 1 
+        }
+    Livros_calculo += 'Cálculo B: Funções de Várias Variáveis Multíplas, Integrais Curvilíneas e de Superfície \n'
+    livro13 = {
+        nome: 'Cálculo B: Funções de Várias Variáveis, Integrais Múltiplas, Integrais Curvilíneas e de Superfície',
+        autor: 'Diva Marilia Flemming',
+        matéria: 'Cálculo',
+        ano: '2007',
+        disponibilidade: 1 
+        }
+    Livros_calculo += 'Cálculo / Howard Anton \n'
+    livro14 = {
+        nome: 'Cálculo',
+        autor: 'Howard Anton',
+        matéria: 'Cálculo',
+        ano: '2009',
+        disponibilidade: 0 
+        }
+    Livros_calculo += 'Cálculo / James Stewart \n'
+    livro15 = {
+        nome: 'Cálculo',
+        autor: 'James Stewart',
+        matéria: 'Cálculo',
+        ano: '2009',
+        disponibilidade: 2
+        }
+    Livros_calculo += 'Cáculo A: Funções, Limite, Derivação, Integração \n'
+    livro16 = {
+        nome: 'Cálculo A: Funções, Limite, Derivação, Integração',
+        autor: 'Diva Marilia Flemming',
+        matéria: 'Cálculo',
+        ano: '2007',
+        disponibilidade: 4 
+        }
+    Livros_calculo += 'Cálculo / George B. Thomas \n'
+    livro17 = {
+        nome: 'Cálculo',
+        autor: 'George B. Thomas',
+        matéria: 'Cálculo',
+        ano: '2012',
+        disponibilidade: 2 
+        }
+    #livros desenho Técnico
+    Livros_desenho = list()
+    Livros_desenho += 'Curso de Desenho Geométrico \n'
+    livro18 = {
+        nome: 'Curso de Desenho Geométrico',
+        autor: 'Affonso Rocha Giongo',
+        matéria: 'Desenho Técnico',
+        ano: '1957',
+        disponibilidade: 5 
+        }
+    Livros_desenho += 'Desenho Técnico Básico: Fundamentos Teóricos e Exercicios a Mão Livre \n'
+    livro19 = {
+        nome: 'Desenho Técnico Básico: Fundamentos Teóricos e Exercícios a Mão Livre',
+        autor: 'Jose Carlos M. Bomancini',
+        matéria: 'Desenho Técnico',
+        ano: '1981',
+        disponibilidade: 3 
+        }
+    Livros_desenho += 'Desenho Técnico e Tecnologia Gráfica \n'
+    livro20 = {
+        nome: 'Desenho Técnico e Tecnologia Gráfica',
+        autor: 'Thomas E. French',
+        matéria: 'Desenho Técnico',
+        ano: '1989',
+        disponibilidade: 3 
+        }
+    Livros_desenho += 'Estudo Dirigido de Autocad 2014 \n'
+    livro21 = {
+        nome: 'Estudo Dirigido de Autocad 2014',
+        autor: 'Cláudia Campos Netto Alves de Lima',
+        matéria: 'Desenho Técnico',
+        ano: '2013',
+        disponibilidade: 0
+        }
+    Livros_desenho += 'Traçados em Desenho Geométrico \n'
+    livro22 = {
+        nome: 'Traçados em Desenho Geométrico',
+        autor: 'Félix O. Rivera',
+        matéria: 'Desenho Técnico',
+        ano: '1986',
+        disponibilidade: 0 
+        }
+    #Livos geometria analítica e algebra Linear
+    Livros_ALGA = list()
+    Livros_ALGA += 'Geometria Analítica / Charles H Lehmann \n'
+    livro23 = {
+        nome: 'Geometria Analítica',
+        autor: 'Alfrdo Steinbruch',
+        matéria: 'geometria analítica e algebra linear',
+        ano: '1987',
+        disponibilidade: 1
+        }
+    Livros_ALGA += 'Geometria Analítica / Paulo Winterle \n '
+    livro24 = {
+        nome: 'Geometria Analítica',
+        autor: 'Paulo Winterle',
+        matéria: 'geometria analítica e algebra linear',
+        ano: '2000',
+        disponibilidade: 0
+    }
+    Livros_ALGA += 'Geometria Analítica : Um Tratamento Vetorial \n'
+    livro25 = {
+        nome: 'Geometria Analítica: Um Tratamento Vetorial',
+        autor: 'Ivan de Camargo',
+        matéria: 'geometria analitica e algebra linear',
+        ano: '2005',
+        disponibilidade: 2
+    }
+    Livros_ALGA += 'Álgebra Linear \n'
+    livro25 = {
+        nome: 'Álgebra Linear',
+        autor: 'Alfredo Steinbruch',
+        matéria: 'geometria analitica e algebra linear',
+        ano: '1987',
+        disponibilidade: 4
+    }
+    Livros_ALGA += 'Vetores e Geometria Analítica \n'
+    livro26 = {
+        nome: 'Vetores e Geometria Analítica',
+        autor: 'Paulo Winterle',
+        matéria: 'geometria analitica e algebra linear',
+        ano: '2000',
+        disponibilidade: 0
+    }
+    Livros_ALGA += 'Álgebra Linear Com Aplicações \n'
+    livro27 = {
+        nome: 'Álgebra Linear Com Aplicações',
+        autor: 'Anton Howard',
+        matéria: 'geometria analitica e algebra linear',
+        ano: '2001',
+        disponibilidade: 1
+    }
+    #Livros Física
+    Livros_fisica = list()
+    Livros_fisica += 'Física Para Cientistas e Engenheiros \n'
+    livro28 = {
+        nome: 'Física Para Cientistas e Engenheiros',
+        autor: 'Paul A. Tipler',
+        matéria: 'física geral',
+        ano: '2008',
+        disponibilidade: 1
+    }
+    Livros_fisica += 'Fundamentos de Física \n'
+    livro29 = {
+        nome: 'Fundamentos de Física',
+        autor: 'David Halliday',
+        matéria: 'física geral',
+        ano: '2008',
+        disponibilidade: 0
+    }
+    Livros_fisica += 'Curso de Física Básica 1: Mecânica \n'
+    livro30 = {
+        nome: 'Curso de Física Básica 1: Mecânica',
+        autor: 'Herch Moysés Nussenzveig',
+        matéria: 'física geral',
+        ano: '2013',
+        disponibilidade: 2
+    }
+    Livros_fisica += 'Curso de Física Básica 2: Fluidos, Oscilações e Ondas, Calor \n'
+    livro31 = {
+        nome: 'Curso de Física Básica 2: Fluidos, Oscilações e Ondas, Calor',
+        autor: 'Herch Moysés Nussenzveig',
+        matéria: 'física geral',
+        ano: '2014',
+        disponibilidade: 3
+    }
+    #Livros de Química
+    Livros_quimica = list()
+    Livros_quimica += 'Princípios de Química: Questionando a Vida Moderna e o Meio Ambiente \n'
+    livro32 = {
+        nome: 'Princípios de Química: Questionando a Vida Moderna e o Meio Ambiente',
+        autor: 'Peter Atkins',
+        matéria: 'química geral',
+        ano: '2012',
+        disponibilidade: 0
+    }
+    Livros_quimica += 'Quimica: a Matéria e Suas Transformações - Vol 1 \n'
+    livro33 = {
+        nome: 'Química: a Matéria e Suas Transformações - Vol 1',
+        autor: 'James E. Brady',
+        matéria: 'química geral',
+        ano: '2003',
+        disponibilidade: 1
+    }
+    Livros_quimica += 'Química: Um Curso Universitário \n'
+    livro34 = {
+        nome: 'Química: Um Curso Universitário',
+        autor: 'Bruce M. Mahan',
+        matéria: 'química geral',
+        ano: '2010',
+        disponibilidade: 2
+    }
+    Livros_quimica += 'Química Geral: Conceitos Essenciais \n'
+    livro35 = {
+        nome: 'Química Geral: Conceitos Essenciais',
+        autor: 'Raymond Chang',
+        matéria: 'química geral',
+        ano: '2010',
+        disponibilidade: 3
+    }
+    #Livros de Matemática Discreta
+    Livros_mat_dis = list()
+    Livros_mat_dis += 'Introducao à Teoria dos Grafos \n'
+    livro36 = {
+        nome: 'Introdução à Teoria dos Grafos',
+        autor: 'Marcia Aguiar Rabuske',
+        matéria: 'matemática discreta',
+        ano: '1992',
+        disponibilidade: 1
+    }
+    Livros_mat_dis += 'Matemática Básica Para Cursos Superiores \n'
+    livro37 = {
+        nome: 'Matemática Básica Para Cursos Superiores',
+        autor: 'Sebastião Medeiros da Silva',
+        matéria: 'matemática discreta',
+        ano: '2002',
+        disponibilidade: 0
+    }
+    Livros_mat_dis += 'Matemática Discreta: Uma Introdução \n'
+    livros38 = {
+        nome: 'Matemática Discreta: Uma Introdução',
+        autor: 'Edward R. Scheneinerman',
+        matéria: 'matéria discreta',
+        ano: '2011',
+        disponibilidade: 1
+    }
+    Livros_mat_dis += 'Teoria Elementar dos Conjuntos \n'
+    livro39 = {
+        nome: 'Teoria Elementar dos Conjuntos',
+        autor: 'Edgar de Alencar Filho',
+        matéria: 'matemática discreta',
+        ano: '1974',
+        disponibilidade: 2
+    }
+    #Livros de Introdução à Engenharia de Computação
+    Livros_int_Ecomp = list()
+    Livros_int_Ecomp += 'Ciência da Computação \n'
+    livro40 = {
+        nome: 'Ciência da Computação',
+        autor: 'John Lewis',
+        matéria: 'introdução à engenharia de computação',
+        ano: '2011',
+        disponibilidade: 0
+    }
+    Livros_int_Ecomp += 'Introdução à Ciência da Computação \n'
+    livro41 = {
+        nome: 'Introdução à Ciência da Computação',
+        autor: 'Fábio Mokarzel',
+        matéria: 'introdução à engenharia de computação',
+        ano: '2008',
+        disponibilidade: 1
+    }
+    Livros_int_Ecomp += 'Algoritmos: Lógica Para Desenvolvimento de Programação de Computadores \n'
+    livro42 = {
+        nome: 'Algoritmos: Lógica Para Desenvolvimento de Programação de Computadores',
+        autor: 'José Augusto N. G. Manzano',
+        matéria: 'introdução à engenharia de computação',
+        ano: '2008',
+        disponibilidade: 2
+    }
+def acesso():
+    matricula = input('Informe seu número de matricula:')
+    if len(matricula) != 6:
+        print('ACESSO NEGADO')
+    else: pesquisa('LivrosAED', 'Livros_calculo', 'Livros_fisica', 'Livros_desenho', 'Livros_ALGA', 'Livros_quimica', 'Livros_mat_disc', 'Livros_int_Ecomp')    
+def pesquisa(LivrosAED, Livros_calculo, Livros_fisica, Livros_desenho, Livros_ALGA, Livros_quimica, Livros_mat_disc, Livros_int_Ecomp):
+    pesquisa = str(input('Digite o livro que quer consultar:')) 
+    if pesquisa in LivrosAED:
+        print('Livros de Algoritmos e Estrutura de dados')
+        print(''.join(LivrosAED))
+    elif pesquisa in Livros_calculo:
+        print('Livros de Cálculo')
+        print(''.join(Livros_calculo))
+    elif pesquisa in Livros_fisica:
+        print('Livros de Física')
+        print(''.join(Livros_fisica))
+    elif pesquisa in Livros_desenho:
+        print('Livros de Desenho Técnico')
+        print(''.join(Livros_desenho))
+    elif pesquisa in Livros_ALGA:
+        print('Livros de Álgebra Linear e Geometria Analítica')
+        print(''.join(Livros_ALGA))  
+    elif pesquisa in Livros_quimica:
+        print('Livros de Química')
+        print(''.join(Livros_quimica))
+    elif pesquisa in Livros_mat_disc:
+        print('Livros de Matemática Discreta')
+        print(''.join(Livros_mat_disc))
+    elif pesquisa in Livros_int_Ecomp:
+        print('Livros de Introdução à Engenharia de Computação')
+        print(''.join(Livros_int_Ecomp))
+    else:
+        print('livro não encontrado')
+        print('tente novamente')
+        print('Dica: tente uma grafia diferente')
+def emprestimo(livro1, livro2, livro3, livro4, livro5, livro6, livro7, livro8, livro9, livro10, livro11, livro12, livro13, livro14, livro15, livro16, livro17, livro18, livro19, livro20, livro21, livro22, livro23, livro24, livro25, livro26, livro27, livro28,livro29,livro30,livro31, livro32, livro33, livro34, livro35, livro36, livro37, livro38, livro39, livro40, livro41, livro42):
+    consulta_dados_livro = pesquisa
+    if consulta_dados_livro == livro1:
+        print(livro1)
+        confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+        if confirmação == 'sim':
+            print('empréstimo feito! Você pode retirar seu livro')
+        if confirmação == 'não':
+            pesquisa()
+        else:
+            print('Erro!')
+            pesquisa()  
+    elif consulta_dados_livro == livro2:
+            print(livro2)
+            reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+            if reserva == 'S':
+                print('livro reservado, assim que ficar disponível você será notificado')
+            else:
+                pesquisa()    
+    if consulta_dados_livro == livro3:
+        print(livro3)
+        confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+        if confirmação == 'sim':
+            print('empréstimo feito! Você pode retirar seu livro')
+        if confirmação == 'não':
+            pesquisa()
+        else:
+            print('Erro!')
+            pesquisa()
+    if consulta_dados_livro == livro4:
+        print(livro4)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()   
+    if consulta_dados_livro == livro5:
+        print(livro5)
+        reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+        if reserva == 'S':
+            print('livro reservado, assim que ficar disponível você será notificado')
+        else:
+            pesquisa()  
+    if consulta_dados_livro == livro6:
+        print(livro6)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa() 
+    if consulta_dados_livro == livro7:
+        print(livro7)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa() 
+    if consulta_dados_livro == livro8:
+        print(livro8)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa() 
+    if consulta_dados_livro == livro9:
+        print(livro9)
+        reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+        if reserva == 'S':
+            print('livro reservado, assim que ficar disponível você será notificado')
+        else:
+            pesquisa() 
+    if consulta_dados_livro == livro10:
+        print(livro10)
+        reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+        if reserva == 'S':
+            print('livro reservado, assim que ficar disponível você será notificado')
+        else:
+            pesquisa() 
+    if consulta_dados_livro == livro11:
+        print(livro11)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa() 
+    if consulta_dados_livro == livro12:
+        print(livro12)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa() 
+    if consulta_dados_livro == livro13:
+        print(livro13)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa() 
+    if consulta_dados_livro == livro14:
+        print(livro14)
+        reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+        if reserva == 'S':
+            print('livro reservado, assim que ficar disponível você será notificado')
+        else:
+            pesquisa() 
+    if consulta_dados_livro == livro15:
+        print(livro15)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa() 
+    if consulta_dados_livro == livro16:
+        print(livro16)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa() 
+    if consulta_dados_livro == livro17:
+        print(livro17)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa() 
+    if consulta_dados_livro == livro18:
+        print(livro18)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro19:
+        print(livro19)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa() 
+    if consulta_dados_livro == livro20:
+            print(livro20)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa() 
+    if consulta_dados_livro == livro21:
+        print(livro21)
+        reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+        if reserva == 'S':
+            print('livro reservado, assim que ficar disponível você será notificado')
+        else:
+            pesquisa() 
+    if consulta_dados_livro == livro22:
+        print(livro22)
+        reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+        if reserva == 'S':
+            print('livro reservado, assim que ficar disponível você será notificado')
+        else:
+            pesquisa()
+    if consulta_dados_livro == livro23:
+            print(livro23)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro24:
+        print(livro24)
+        reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+        if reserva == 'S':
+            print('livro reservado, assim que ficar disponível você será notificado')
+        else:
+            pesquisa()
+    if consulta_dados_livro == livro25:
+            print(livro25)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro26:
+        print(livro26)
+        reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+        if reserva == 'S':
+            print('livro reservado, assim que ficar disponível você será notificado')
+        else:
+            pesquisa()
+    if consulta_dados_livro == livro27:
+        print(livro27)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro28:
+            print(livro28)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro29:
+            print(livro29)
+    reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+    if reserva == 'S':
+        print('livro reservado, assim que ficar disponível você será notificado')
+    else:
+        pesquisa()
+    if consulta_dados_livro == livro30:
+        print(livro30)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()       
+    if consulta_dados_livro == livro31:
+        print(livro31)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro32:
+            print(livro32)
+    reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+    if reserva == 'S':
+        print('livro reservado, assim que ficar disponível você será notificado')
+    else:
+        pesquisa()
+    if consulta_dados_livro == livro33:
+        print(livro33)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro34:
+        print(livro34)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro35:
+        print(livro35)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro36:
+        print(livro36)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro37:
+            print(livro37)
+    reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+    if reserva == 'S':
+        print('livro reservado, assim que ficar disponível você será notificado')
+    else:
+        pesquisa()
+    if consulta_dados_livro == livro38:
+        print(livro38)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro39:
+        print(livro39)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro40:
+            print(livro40)
+    reserva = str(input('Livro não disponível, deseja deixar reservado? (S / N)'))
+    if reserva == 'S':
+        print('livro reservado, assim que ficar disponível você será notificado')
+    else:
+        pesquisa()
+    if consulta_dados_livro == livro41:
+        print(livro41)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+    if consulta_dados_livro == livro42:
+        print(livro42)
+    confirmação = input(print('Deseja alugar este livro? (sim / nao)'))
+    if confirmação == 'sim':
+        print('empréstimo feito! Você pode retirar seu livro')
+    if confirmação == 'não':
+        pesquisa()
+    else:
+        print('Erro!')
+        pesquisa()
+base_de_dados()
+acesso()
+emprestimo('livro1', 'livro2', 'livro3', 'livro4', 'livro5', 'livro6', 'livro7', 'livro8', 'livro9', 'livro10', 'livro11', 'livro12', 'livro13', 'livro14', 'livro15', 'livro16', 'livro17', 'livro18', 'livro19', 'livro20', 'livro21', 'livro22', 'livro23', 'livro24', 'livro25', 'livro26', 'livro27', 'livro28', 'livro29', 'livro30', 'livro31', 'livro32', 'livro33', 'livro34', 'livro35', 'livro36', 'livro37', 'livro38', 'livro39', 'livro40', 'livro41', 'livro42')
